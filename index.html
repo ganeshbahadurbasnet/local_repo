@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GitHub Upload Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <h1>GitHub Upload Test</h1>
+    <p class="subtitle">This is a simple page to test uploading to GitHub Pages or a repo.</p>
+
+    <div class="buttons">
+      <a class="btn" href="https://github.com" target="_blank" rel="noopener">Open GitHub</a>
+      <button class="btn" id="greetBtn">Say Hello</button>
+    </div>
+
+    <p id="message" class="message" aria-live="polite"></p>
+  </main>
+
+  <script>
+    document.getElementById('greetBtn').addEventListener('click', () => {
+      const msg = document.getElementById('message');
+      const now = new Date().toLocaleTimeString();
+      msg.textContent = `Hello! Test successful — ${now}`;
+    });
+  </script>
+</body>
+</html>
